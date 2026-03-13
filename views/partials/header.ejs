@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a href="/" class="brand" aria-label="METE Security home">
+      <img src="/images/logos/logo-no-bg.png" alt="METE Security logo" class="brand-logo" />
+      <span class="brand-text">METE Security</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/" class="<%= currentPath === '/' ? 'active' : '' %>">Home</a>
+      <a href="/services" class="<%= currentPath === '/services' ? 'active' : '' %>">Services</a>
+      <a href="/about" class="<%= currentPath === '/about' ? 'active' : '' %>">About</a>
+      <a href="/contact" class="<%= currentPath === '/contact' ? 'active' : '' %>">Contact</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,27 @@
+<%- include('partials/head') %>
+
+<main class="admin-wrap">
+  <section class="admin-card">
+    <img src="/images/logos/logo-no-bg.png" alt="METE Security logo" class="admin-logo" />
+    <h1>Admin Login</h1>
+    <p class="muted">Authorized staff access only.</p>
+
+    <% if (error) { %>
+    <p class="error-msg"><%= error %></p>
+    <% } %>
+
+    <form method="POST" action="/admin/login" class="admin-form">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required autocomplete="username" />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required autocomplete="current-password" />
+
+      <button type="submit" class="btn btn-gold">Sign In</button>
+    </form>
+
+    <a href="/" class="admin-back">Return to website</a>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

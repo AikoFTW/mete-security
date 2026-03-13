@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<main class="section">
+  <div class="container">
+    <div class="admin-dashboard-head">
+      <div>
+        <p class="eyebrow">Admin Area</p>
+        <h1>Welcome, <%= adminUser %></h1>
+      </div>
+      <form action="/admin/logout" method="POST">
+        <button type="submit" class="btn btn-outline">Log Out</button>
+      </form>
+    </div>
+
+    <section class="admin-panel">
+      <h2>Site Status</h2>
+      <p>
+        Admin authentication is active. Public pages include Home, Services, About, Contact,
+        and a custom 404 page.
+      </p>
+      <p class="muted">Expand this dashboard later for CRM or inquiry management integrations.</p>
+    </section>
+  </div>
+</main>
+
+<%- include('partials/footer') %>
