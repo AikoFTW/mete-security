@@ -455,12 +455,28 @@ main {
 }
 
 @media (max-width: 900px) {
+  .container {
+    width: min(1120px, 94%);
+  }
+
   .hero-grid,
   .split,
   .quick-grid,
   .service-grid,
   .tech-strip-grid {
     grid-template-columns: 1fr;
+  }
+
+  .nav-wrap {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+    padding: 0.8rem 0;
+  }
+
+  .brand {
+    justify-content: center;
+    width: 100%;
   }
 
   .brand-logo {
@@ -473,18 +489,118 @@ main {
   }
 
   .site-nav {
+    width: 100%;
     gap: 0.35rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
   }
 
   .site-nav a {
+    flex: 0 0 auto;
     padding: 0.5rem 0.75rem;
     font-size: 0.92rem;
+  }
+
+  .hero {
+    padding: 3.3rem 0 2.2rem;
+  }
+
+  .section {
+    padding: 1.8rem 0 3rem;
+  }
+
+  .hero-content h1 {
+    max-width: 100%;
+  }
+
+  .hero-card {
+    padding: 1.3rem;
+    border-radius: 16px;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 220px;
+  }
+
+  .admin-dashboard-head {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: clamp(1.65rem, 8vw, 2.1rem);
+  }
+
+  .eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+
+  .brand {
+    padding: 0.35rem 0.6rem;
+  }
+
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text {
+    font-size: 0.92rem;
+  }
+
+  .site-nav {
+    padding: 0.3rem;
+  }
+
+  .site-nav a {
+    padding: 0.44rem 0.65rem;
+    font-size: 0.86rem;
+  }
+
+  .tech-badges {
+    gap: 0.45rem;
+  }
+
+  .tech-badges span {
+    font-size: 0.78rem;
+    padding: 0.32rem 0.64rem;
+  }
+
+  .feature-card,
+  .service-card,
+  .about-panel,
+  .admin-panel,
+  .crm-section,
+  .tech-strip-grid article {
+    padding: 0.95rem;
+  }
+
+  .crm-embed-placeholder {
+    min-height: 150px;
+    padding: 1.1rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.72rem 1rem;
   }
 }
